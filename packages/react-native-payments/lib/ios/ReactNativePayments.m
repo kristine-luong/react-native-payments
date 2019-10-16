@@ -15,9 +15,29 @@ RCT_EXPORT_MODULE()
 - (NSDictionary *)constantsToExport
 {
     return @{
-             @"canMakePayments": @([PKPaymentAuthorizationViewController canMakePayments]),
-             @"supportedGateways": [GatewayManager getSupportedGateways]
-             };
+        @"canMakePayments": @([PKPaymentAuthorizationViewController canMakePayments]),
+        @"supportedGateways": [GatewayManager getSupportedGateways]
+            @"paymentNetworks":  @{
+                @"Amex": string,
+                @"CartesBancaires": string,
+                @"ChinaUnionPay": string,
+                @"Discover": string,
+                @"Eftpos": string,
+                @"Electron": string,
+                @"Elo": string,
+                @"IDCredit": string,
+                @"Interac": string,
+                @"JCB": string,
+                @"Mada": string,
+                @"Maestro": string,
+                @"MasterCard": string,
+                @"PrivateLabel": string,
+                @"QuicPay": string,
+                @"Suica": string,
+                @"Visa": string,
+                @"VPay": string,
+            }
+    };
 }
 
 RCT_EXPORT_METHOD(canMakePaymentsUsingNetworks:

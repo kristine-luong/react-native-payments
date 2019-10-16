@@ -1,3 +1,4 @@
+// tslint:disable
 declare module '@brandingbrand/react-native-payments' {
   export interface PaymentMethodData {
     supportedMethods: string[];
@@ -52,6 +53,27 @@ declare module '@brandingbrand/react-native-payments' {
     toJSON<T = any>(): T;
   }
 
+  export interface PaymentNetworks {
+    Amex: string;
+    CartesBancaires: string;
+    ChinaUnionPay: string;
+    Discover: string;
+    Eftpos: string;
+    Electron: string;
+    Elo: string;
+    IDCredit: string;
+    Interac: string;
+    JCB: string;
+    Mada: string;
+    Maestro: string;
+    MasterCard: string;
+    PrivateLabel: string;
+    QuicPay: string;
+    Suica: string;
+    Visa: string;
+    VPay: string;
+  }
+
   export type PaymentShippingType = "shipping" | "delivery" | "pickup";
 
   export interface PaymentRequestEventMap {
@@ -83,6 +105,9 @@ declare module '@brandingbrand/react-native-payments' {
   export declare var PaymentRequest: {
     prototype: PaymentRequest;
     new(methodData: PaymentMethodData[], details: PaymentDetailsInit, options?: PaymentOptions): PaymentRequest;
+    canMakePaymentsUsingNetworks(networks: string[]): Promise<boolean>;
+    canMakePayments: boolean;
+    paymentNetworks: PaymentNetworks;
   };
 
 }

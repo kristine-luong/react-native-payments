@@ -497,5 +497,7 @@ export default class PaymentRequest {
   }
 
   static canMakePaymentsUsingNetworks = NativePayments.canMakePaymentsUsingNetworks;
+  static canMakePayments = NativePayments.canMakePayments;
+  static paymentNetworks = NativePayments.paymentNetworks || {};
 }
 
