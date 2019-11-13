@@ -301,6 +301,7 @@ export default class PaymentRequest {
       billingContact: serializedBillingContact,
       shippingContact: serializedShippingContact,
       paymentToken,
+      paymentMethod,
       transactionIdentifier,
     } = details;
 
@@ -326,6 +327,7 @@ export default class PaymentRequest {
       billingContact,
       shippingContact,
       paymentToken,
+      paymentMethod,
       transactionIdentifier,
     };
   }
