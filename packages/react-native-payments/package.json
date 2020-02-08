@@ -1,5 +1,5 @@
 {
-  "name": "@kristine-luong/react-native-payments",
+  "name": "@brandingbrand/react-native-payments",
   "version": "0.10.2",
   "scripts": {
     "run:packager": "cd examples/native && yarn run:packager",
