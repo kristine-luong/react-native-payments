@@ -1,5 +1,5 @@
 {
-  "name": "@brandingbrand/react-native-payments",
+  "name": "@kristine-luong/react-native-payments",
   "version": "0.10.2",
   "scripts": {
     "run:packager": "cd examples/native && yarn run:packager",
@@ -8,7 +8,7 @@
     "run:demo": "cd examples/native && yarn run:demo",
     "test": "jest"
   },
-  "repository": "https://github.com/naoufal/react-native-payments",
+  "repository": "https://github.com/kristine-luong/react-native-payments.git",
   "keywords": [
     "react",
     "react-native",
